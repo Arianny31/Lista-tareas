@@ -1,7 +1,7 @@
 import { Todo } from '../todo/models/todo.models';
 
 const Filters ={
-    All:' Todo',
+    All:' Todos',
     Completed: 'Completo',
     Pending: 'Pendiente'
 }
@@ -19,7 +19,7 @@ const state = {
 
 const initStore =() =>{
 
-    //console.log(state);
+    console.log(state);
     console.log ('InitStore');
 
 }
