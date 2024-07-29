@@ -4,6 +4,7 @@ import { renderTodos } from './use-case/render-todos';
 
 const ElementId ={
     TodoList: '.todo-list',
+    NewTodoInput: '#new-todo-input',
 }
 
 /**
@@ -25,5 +26,14 @@ export const  App = (elementId) =>{
         app.innerHTML = html;
         document.querySelector(elementId).append(app);
         displayTodos();
-    })()
+    })();
+
+    //referencias HTML
+    const NewDescriptionInput = document.querySelector(ElementId.NewTodoInput);
+
+    //listerners
+    NewDescriptionInput.addEventListener('keyup', ( event ) =>{
+        console.log(event);
+        console.log(event.target)
+    })
 }
