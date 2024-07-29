@@ -1,4 +1,4 @@
-
+import { v4 as uuid } from 'uuid';
 
 
 export class Todo{
@@ -10,7 +10,7 @@ export class Todo{
 
 
     constructor( descricion ){
-        this.id =1;
+        this.id = uuid();
         this.descricion= descricion;
         this.done = false;
         this.createdAt= new Date();
