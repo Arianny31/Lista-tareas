@@ -29,6 +29,23 @@ const loadStore = ()=>{
 
 }
 
+const getTodos = (filter = Filters.All) =>{
+   switch(filter){
+    case Filters.All :
+        return [...state.todos];
+
+    case Filters.Completed:
+        return state.todos.filter(todo => todo.done);
+
+    case Filters.Pending:
+         return state.todos.filter(todo => !todo.done);
+
+    default:
+        throw new Error(`Opcion ${filter} no es valido`);
+    
+   }
+}
+
 /**
  * 
  * @param {Sting} descricion 
@@ -68,5 +85,6 @@ export default{
     deleteCompleted,
     setFilter,
     getCurrentFilter,
+    getTodos,
 
 }
