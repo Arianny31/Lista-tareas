@@ -52,28 +52,33 @@ const getTodos = (filter = Filters.All) =>{
  */
 
 const addTodo =(descricion) =>{
-    throw new Error ('No esta implementado');
-
+    if (!descricion) throw new Error('Descricion es requerida');
+    state.todos.push(new Todo (descricion));
 }
 
 const toggleTodo =(todoId) =>{
-    throw new Error ('No esta implementado');
+    state.todos = state.todos.map(todo=>{
+        if(todo.id === todoId){
+            todo.done= !todo.done;
+        }
+        return todo;
+    })
 }
 
 const deleteTodo  =(todoId) =>{
-    throw new Error ('No esta implementado');
+    state.todos= state.todos.filter(todo => todo.id !== todoId);
 }
 
 const deleteCompleted =() =>{
-    throw new Error ('No esta implementado');
+    state.todos= state.todos.filter(todo => todo.done );
 }
 
 const setFilter =( newFilter = Filters.All ) =>{
-    throw new Error ('No esta implementado');
+    state.filter= newFilter;
 }
 
 const getCurrentFilter = ()=>{
-    throw new Error ('No esta implementado');
+   return state.filter;
 }
 
 export default{
