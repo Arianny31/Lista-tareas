@@ -2,8 +2,8 @@ import { Todo } from '../todo/models/todo.models';
 
 const Filters ={
     All:' Todos',
-    Completed: 'Completo',
-    Pending: 'Pendiente'
+    Completo: 'Completo',
+    Pendiente: 'Pendiente',
 }
 
 

@@ -25,7 +25,7 @@ export const createTodoHTML= (todo) =>{
 
 
     if( todo.done){
-        liElement.classList.add('Completed');
+        liElement.classList.add('Completo');
     }
    
 
