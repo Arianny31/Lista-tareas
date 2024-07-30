@@ -1,6 +1,6 @@
 import { Todo } from '../todo/models/todo.models';
 
-const Filters ={
+export const Filters ={
     All:' Todos',
     Completo: 'Completo',
     Pendiente: 'Pendiente',
@@ -49,7 +49,7 @@ const getTodos = (filter = Filters.All) =>{
          return state.todos.filter(todo => !todo.done);
 
     default:
-        throw new Error(`Opcion ${filter} no es valido`);
+       throw new Error(`Opcion ${filter} no es valido`);
     
    }
 }
