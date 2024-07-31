@@ -9,9 +9,9 @@ export const Filters ={
 
 const state = {
     todos: [
-        new Todo('Piedra del alma'),
-        new Todo('Hola'),
-        new Todo('adios, espero funcione')
+        new Todo('Matematica'),
+        new Todo('Quimica'),
+        new Todo('Sociales')
     ],
     filter: Filters.All
 }
